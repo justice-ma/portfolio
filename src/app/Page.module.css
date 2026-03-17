@@ -1,0 +1,29 @@
+.displayColumns {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) 1fr;
+  align-items: start;
+  gap: clamp(var(--spacing-2), 3vw, var(--spacing-5));
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hero {
+  position: sticky;
+  top: clamp(0.75rem, 2vw, 1rem);
+  margin-top: var(--spacing-5);
+}
+
+@media (max-width: 1024px) {
+  .displayColumns {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    position: relative;
+    top: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
